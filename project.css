@@ -50,8 +50,7 @@ p[data-action="lose"] {
 	height: 295px;
 	-webkit-border-radius: 150px 150px 150px 150px;
 	border-radius: 150px 150px 150px 150px;
-    -moz-box-shadow: 2px 1px 12px #aaa;
-    -webkit-box-shadow: 2px 1px 12px #aaa;
+        -webkit-box-shadow: 2px 1px 12px #aaa;
     -o-box-shadow: 2px 1px 12px #aaa;
     box-shadow: 2px 1px 12px #aaa;
 }
@@ -67,14 +66,6 @@ p[data-action="lose"] {
 
 .tile.lit {
 	opacity: 1;
-}
-
-.red, .blue, .yellow, .green {
-	height: 290px;
-	-webkit-border-radius: 150px 150px 150px 150px;
-	border-radius: 150px 150px 150px 150px;
-	position: absolute;
-	text-indent: 10000px;
 }
 
 .red:hover, .blue:hover, .yellow:hover, .green:hover {
