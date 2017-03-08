@@ -1,5 +1,5 @@
 body{
-	color:#a0496c;
+	color:#7c0032;
 	font-family:Arial;
 	font-size:13px;
 	margin:0;
@@ -23,7 +23,7 @@ p a:hover{
 	color:#3f4044;
 }
 #page{
-	background:url(../images/bg-header.gif) repeat-x top center;
+	background:url(../images/bg-header.png) repeat-x top center;
 	width:100%;
 }
 #header{
@@ -38,7 +38,7 @@ p a:hover{
 	width:316px;
 }
 #header ul{
-	background:url(../images/bg-navigation.gif) no-repeat top center;
+	background:url(../images/bg-navigation.png) no-repeat top center;
 	float:left;
 	height:50px;
 	list-style:none;
@@ -62,21 +62,21 @@ p a:hover{
 	line-height:50px;
 	text-align:center;
 	text-decoration:none;
-	text-shadow:1px 1px 0 #cc0850;
+	text-shadow:1px 1px 0 #7c0032;
 	text-transform:capitalize;
 }
 #header ul li a:hover, #header ul li.selected a{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -370px;
+	background:url(../images/sprites-icons.png) no-repeat 0 -370px;
 	color:#7c0032;
 	text-shadow:1px 1px 0 #fde8f7;
 }
 #header ul li.first a:hover, #header ul li.current a{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -250px;
+	background:url(../images/sprites-icons.png) no-repeat 0 -250px;
 	color:#7c0032;
 	text-shadow:1px 1px 0 #fde8f7;
 }
 #header ul li.last a:hover, #header ul li.select a{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -310px;
+	background:url(../images/sprites-icons.png) no-repeat 0 -310px;
 	color:#7c0032;
 	text-shadow:1px 1px 0 #fde8f7;
 }
@@ -119,7 +119,7 @@ p a:hover{
 	left:0;
 	margin:0;
 	position:absolute;
-	text-shadow:1px 2px 0 #CF648E;
+	text-shadow:1px 2px 0 #7c0032;
 	top:146px;
 }
 #content div#home div{
@@ -135,7 +135,7 @@ p a:hover{
 	width:250px;
 }
 #content div#home div h1 a{
-	color:#fe3385;
+	color:#7c0032;
 	text-decoration:none;
 }
 #content div#home div h1 span{
@@ -186,7 +186,7 @@ p a:hover{
 	padding-top:0;
 }
 #content div div.aside ul li a, #content div div.aside div span{
-	color:#F63C85;
+	color:#7c0032;
 	display:block;
 	font-size:20px;
 	font-style:italic;
@@ -211,7 +211,7 @@ p a:hover{
 	width:620px;
 }
 #content div div h2{
-	color:#F63C85;
+	color:#7c0032;
 	font-size:20px;
 	font-weight:normal;
 	margin:0 0 15px;
@@ -282,7 +282,7 @@ p a:hover{
 	margin-left:0;
 }
 #content div div div dl dt{
-	color:#F63C85;
+	color:#7c0032;
 	font-size:18px;
 	padding-bottom:10px;
 }
@@ -305,19 +305,19 @@ p a:hover{
 #content div div h1 span{
 	display:inline;
 	font-size:30px;
-	color:#F63C85;
+	color:#7c0032;
 }
 #content div div span{
 	display:block;
 	font-size:18px;
-	color:#F63C85;
+	color:#7c0032;
 }
 #content div div p{
 	margin-top:0;
 	margin-bottom:20px;
 }
 #content div div h3{
-	color:#F63C85;
+	color:#7c0032;
 	font-size:25px;
 	font-weight:normal;
 	margin-top:0;
@@ -465,7 +465,7 @@ p a:hover{
 	width:283px;
 }
 #footer div div ul li h2 a{
-	color:#f63c85;
+	color:#7c0032;
 	display:block;
 	text-decoration:none;
 }
@@ -489,13 +489,13 @@ p a:hover{
 	margin-left:21px;
 }
 #footer div div div div h3{
-	color:#F63C85;
+	color:#7c0032;
 	font-size:18px;
 	font-style:italic;
 	margin:0;
 }
 #footer div div div div h3 a:hover, #footer div div ul li h2 a:hover, #content div div.aside ul li a:hover{
-	color:#ab3d69;
+	color:#7c0032;
 }
 #content div#blog div ul{
 	list-style:none;
@@ -548,11 +548,11 @@ p a:hover{
 	text-indent:100px;
 }
 #content div#blog div ul li h1 a{
-	color:#875976;
+	color:#7c0032;
 	text-decoration:none;
 }
 #content div#blog div ul li h1 a:hover{
-	color:#68475d;
+	color:#7c0032;
 }
 #content div#blog div ul li h2{
 	font-weight:normal;
@@ -562,7 +562,7 @@ p a:hover{
 	padding-top:10px;
 }
 #content div#blog div div.section a{
-	color:#F63C85;
+	color:#7c0032;
 	display:block;
 	float:left;
 	font-size:18px;
@@ -602,24 +602,24 @@ p a:hover{
 	text-indent:30px;
 }
 #footer div div div div ul li a:hover{
-	color:#A0496C;
+	color:#584549;
 }
 #footer div div div div ul li a.facebook{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -990px;
+	background:url(../images/sprites-icons.png) no-repeat 0 -990px;
 }
 #footer div div div div ul li a.support{
-	background:url(../images/sprites-icons.gif) no-repeat 43px -1266px;
+	background:url(../images/sprites-icons.png) no-repeat 43px -1266px;
 	padding-left:40px;
 }
 #footer div div div div ul li a.twitter{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -1300px;
+	background:url(../images/sprites-icons.png) no-repeat 0 -1300px;
 }
 #footer div div div div ul li a.flicker{
-	background:url(../images/sprites-icons.gif) no-repeat 43px -1052px;
+	background:url(../images/sprites-icons.png) no-repeat 43px -1052px;
 	padding-left:40px;
 }
 #footer div div div div span{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -1114px;
+	background:url(../images/sprites-icons.png) no-repeat 0 -1114px;
 	display:block;
 	color:#584549;
 	font-family:Georgia;
@@ -630,7 +630,7 @@ p a:hover{
 	text-indent:60px;
 }
 #footer div p.footnote{
-	background:url(../images/bg-copyright.gif) no-repeat top center;
+	background:url(../images/bg-copyright.jpg) no-repeat top center;
 	color:#c48aa0;
 	display:block;
 	height:60px;
