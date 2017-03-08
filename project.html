@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <link rel="stylesheet" type="text/css" href="project.css"  />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="project.js"></script>
-    </head>
-    <body>
+<head>
+        <title>The Healthy Life | About</title>
 
-    	<div class="wrapper">
-    		<h1>Simon Says</h1>
-    			<div class="game-board">
-    				<div class="simon">
-    					<ul>
-    						<li class="tile red" data-tile="1"></li>
-    						<li class="tile blue" data-tile="2"></li>
-    						<li class="tile yellow" data-tile="3"></li>
-    						<li class="tile green" data-tile="4"></li>
-    					</ul>
-    				</div>
-    			</div>
-    			<div class="game-info">
-    				<h2>Round: <span data-round="0">0</span></h2>
-    				<button data-action="start" >Start</button>
-    				<p data-action="lose">Sorry, you lost after <span data-round="0"></span> rounds!</p>
-    			</div>
-    			<div class="game-options">
-    				<h2>Game Levels:</h2>
-					<input type="radio" name="mode" value="Hard">Hard<br>
-    				<input type="radio" name="mode" value="normal" checked>Normal<br>
-    				<input type="radio" name="mode" value="Easy">Easy<br>
-    				<input type="radio" name="mode" value="free-board">Free board
-    			</div>
-    		<div data-action="sound"></div>
-
-    	</div>
+    <link rel="stylesheet" type="text/css" href="project.css"/>
+    <script src="project.js"></script>
 
 
-    </body>
-    </html>
+</head>
+
+<body>
+    <header>
+        <h1>helthy life</h1>
+    </header>
+    <main>
+        <section class="calc">
+            <fieldset>
+                <legend>Enter your data</legend>
+            <lable for="Gender">Gender</lable>
+            <select >
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+            </br>
+            <label for="age">Age(years)<span id="star">*</span></label>
+            <input id="age" autofocus required></input>
+            </br>
+            <label for="weight">Weight(kg)<span id="star">*</span></label>
+            <input id="weight"  autofocus required></input>
+            </br>
+             <label for="height">Height(cm)<span id="star">*</span></label>
+            <input id="weight"  autofocus required ></input>
+            <form action ="">
+                <label for="activity">Activity</label>
+                <input type="radio" name="activity" value="Moderate">Moderate
+                <input type="radio" name="activity" value="Sedentary">Sedentary
+                <input type="radio" name="activity" value="Strenous">Strenous
+            </form>
+
+            <input type="submit" value="submit data"/>
+
+            </fieldset>
+        </section>
+
+    </main>
+
+</body>
+
+
+
+
+
+
+</html>
