@@ -95,7 +95,6 @@ p a:hover{
 	margin:-30px auto 0;
 	padding:0 0 0 20px;
 	width:920px;
-	
 }
 #content div#home ul{
 	background:#e5dae0;
@@ -104,7 +103,6 @@ p a:hover{
 	margin:0;
 	padding:0;
 	width:280px;
-	font-family: fantasy;
 }
 #content div#home ul li{
 	display:block;
@@ -643,4 +641,27 @@ p a:hover{
 #footer div p.footnote a{
 	color:#c48aa0;
 	text-decoration:none;
+}
+#content div div div{
+	margin-top:5px;
+	padding-top:5px;
+}
+#content div div div dl dt{
+	padding-top:10px;
+}
+#content div#blog div div.section a{
+	padding-right:0;
+	width:205px;
+}
+#footer div div div div ul{
+	padding-top:15px;
+}
+#footer div div div div ul li{
+	padding:0;
+}
+#footer div div div div span{
+	margin-top:60px;
+}
+#content div div div dl{
+	padding-top:10px;
 }
