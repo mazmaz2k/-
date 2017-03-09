@@ -631,7 +631,7 @@ p a:hover{
 }
 #footer div p.footnote{
 	background:url(../images/bg-copyright.jpg) no-repeat top center;
-	color:#c48aa0;
+	color:#151516;
 	display:block;
 	height:60px;
 	line-height:60px;
@@ -639,6 +639,6 @@ p a:hover{
 	text-align:center;
 }
 #footer div p.footnote a{
-	color:#c48aa0;
+	color:#151516;
 	text-decoration:none;
 }
