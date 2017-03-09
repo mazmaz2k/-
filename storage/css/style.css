@@ -160,13 +160,13 @@ p a:hover{
 	overflow:hidden;
 	width:920px;
 }
-#content div div.aside, #content div#blog div.aside{
+#content div div.aside{
 	float:left;
 	height:auto;
 	margin:0;
 	width:240px;
 }
-#content div div.aside ul, #content div#blog div.aside ul{
+#content div div.aside ul{
 	list-style:none;
 	margin:0;
 	padding:0;
@@ -176,12 +176,8 @@ p a:hover{
 	display:block;
 	padding:20px 0 10px;
 }
-#content div#blog div.aside ul li{
-	background:none;
-	font-weight:normal;
-	padding:30px 0 0;
-}
-#content div div.aside ul li.first, #content div#blog div.aside ul li.first{
+
+#content div div.aside ul li.first {
 	background:none;
 	padding-top:0;
 }
@@ -195,12 +191,7 @@ p a:hover{
 	text-align:center;
 	text-decoration:none;
 }
-#content div#blog div.aside ul li p{
-	margin-bottom:0;
-}
-#content div#blog div.aside ul li p.first{
-	margin-top:10px;
-}
+
 #content div div.aside ul li img{
 	float:none;
 }
@@ -217,11 +208,7 @@ p a:hover{
 	margin:0 0 15px;
 	padding-top:20px;
 }
-#content div#blog div.aside ul li h2{
-	font-weight:normal;
-	margin:0;
-	padding:0;
-}
+
 #content div div h2.first{
 	padding-top:0;
 }
@@ -322,21 +309,7 @@ p a:hover{
 	font-weight:normal;
 	margin-top:0;
 }
-#content div#blog div ul li h3{
-	font-size:18px;
-	margin:0;
-	padding-top:5px;
-	text-indent:20px;
-}
-#content div#blog div ul li span{
-	color:#827771;
-	display:inline;
-	font-size:13px;
-	font-style:normal;
-	font-weight:normal;
-	line-height:0;
-}
-#content div div.aside div{
+ontent div div.aside div{
 	background:none;
 	margin-top:0;
 }
@@ -390,12 +363,7 @@ p a:hover{
 	padding-top:15px;
 	text-align:left;
 }
-#content div#blog div.aside ul li div p{
-	padding:0;
-}
-#content div#blog div.aside ul li div{
-	padding-left:30px;
-}
+
 #content div div.aside div b span{
 	background:url(../images/sprites-icons.gif) no-repeat 60px -1165px;
 	display:block;
@@ -497,91 +465,9 @@ p a:hover{
 #footer div div div div h3 a:hover, #footer div div ul li h2 a:hover, #content div div.aside ul li a:hover{
 	color:#7c0032;
 }
-#content div#blog div ul{
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-#content div#blog div ul li{
-	background:url(../images/border-dashed.gif) repeat-x center 25px;
-	padding-top:10px;
-	position:relative;
-}
-#content div#blog div ul li span#date{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -209px;
-	color:#F8FFFB;
-	display:inline-block;
-	font-weight:bold;
-	height:30px;
-	line-height:30px;
-	text-indent:17px;
-	width:87px;
-}
-#content div#blog div ul li span.connect{
-	display:block;
-	height:20px;
-	position:absolute;
-	right:0;
-	top:0;
-	z-index:1;
-}
-#content div#blog div ul li span.connect a{
-	display:block;
-	float:left;
-	height:20px;
-	margin:0 0 0 5px;
-	text-decoration:none;
-	text-indent:-99999px;
-	width:20px;
-}
-#content div#blog div ul li span.connect a.twitter{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -1330px;
-}
-#content div#blog div ul li span.connect a.heart{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -1083px;
-}
-#content div#blog div ul li span.connect a.facebook{
-	background:url(../images/sprites-icons.gif) no-repeat 0 -1022px;
-}
-#content div#blog div ul li h1{
-	font-weight:normal;
-	text-indent:100px;
-}
-#content div#blog div ul li h1 a{
-	color:#7c0032;
-	text-decoration:none;
-}
-#content div#blog div ul li h1 a:hover{
-	color:#7c0032;
-}
-#content div#blog div ul li h2{
-	font-weight:normal;
-	padding-top:0;
-}
-#content div#blog div div.section{
-	padding-top:10px;
-}
-#content div#blog div div.section a{
-	color:#7c0032;
-	display:block;
-	float:left;
-	font-size:18px;
-	height:1%;
-	line-height:18px;
-	text-align:center;
-	text-decoration:none;
-	width:206px;
-}
-#content div#blog div div.section a.newerpost{
-	text-align:left;
-}
-#content div#blog div div.section a.olderpost{
-	text-align:right;
-}
-#content div#blog div ul li img{
-	margin-right:105px;
-	margin-top:-43px;
-}
+
+
+
 #footer div div div div ul{
 	list-style:none;
 	margin:0;
