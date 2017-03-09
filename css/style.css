@@ -104,6 +104,15 @@ p a:hover{
 	padding:0;
 	width:280px;
 }
+
+
+
+#content div#insertData #star{
+    color: red;
+    display: inline;
+
+
+}
 #content div#home ul li{
 	display:block;
 	height:180px;
