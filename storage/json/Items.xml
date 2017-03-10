@@ -19,4 +19,14 @@
        <price units = "ils">15.30</price>
         <From>Thiland</From>
    </item>
+   <item id = "8556">
+      <name>Micro USB 3.0 Charger</name>
+      <price units = "ils">27.69</price>
+       <From>Hong Kong</From>
+  </item>
+  <item id = "4278">
+     <name>Retractable USB Data Sync Cable Charger</name>
+     <price units = "ils">6.82</price>
+      <From>China</From>
+ </item>
 </items>

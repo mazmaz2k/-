@@ -1,11 +1,5 @@
 var xmlPage = function() {
     var parser = new DOMParser();
-    json = require('json-update')
- 
-json.load('data.json', function(err, obj) {
-  console.log("Loaded from json:");
-  console.log(obj);
-});
     var doc = parser.parseFromString(xmlStr, 'text/xml');
 
   var initModule = function() {
@@ -25,8 +19,11 @@ json.load('data.json', function(err, obj) {
         var i;
         var list = doc.getElementsByTagName("item");
         var even = false;
+        var priceWanted = $("#txtPrice").val();
         for(i = 0; i < list.length; i++)
         {
+          var p = parseFloat(list[i].getElementsByTagName("price")[0].childNodes[0].nodeValue);
+          if(priceWanted === "" || p <= parseFloat(priceWanted) ) {
             str += "<tr class = ";
             if(even === true)
             {
@@ -49,6 +46,7 @@ json.load('data.json', function(err, obj) {
                 n = n.nextSibling;
             }
             str += "</tr>";
+          }
         }
 
         str += "</table>";

@@ -6,6 +6,13 @@ button {
 #cmdLoadJSON {
   left : 100px;
 }
+
+#txtPrice {
+  position: absolute;
+  left : 180px;
+  bottom: 10%;
+}
+
 td {
     padding : 15px;
 }
