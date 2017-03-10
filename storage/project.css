@@ -1,6 +1,7 @@
 
 body{
       background-image: url("background.JPG");
+      
 }
 #star{
     color: red;
@@ -13,7 +14,7 @@ label{
     font-size: 20px;
     font-family:  Georgia, 'Times New Roman', Times, serif;
 	color: #1a0000;
-    
+
 }
 
 
@@ -32,6 +33,7 @@ input{
     float: left;
     background-image: url("calcpic.JPG");
     border-radius: 15px;
+    margin-left: 70px;
 }
 legend{
     font-size: 20px;
