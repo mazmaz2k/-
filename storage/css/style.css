@@ -68,17 +68,17 @@ p a:hover{
 #header ul li a:hover, #header ul li.selected a{
 	background:url(../images/sprites-icons.png) no-repeat 0 -370px;
 	color:#7c0032;
-	text-shadow:1px 1px 0 #fde8f7;
+	
 }
 #header ul li.first a:hover, #header ul li.current a{
 	background:url(../images/sprites-icons.png) no-repeat 0 -250px;
 	color:#7c0032;
-	text-shadow:1px 1px 0 #fde8f7;
+
 }
 #header ul li.last a:hover, #header ul li.select a{
 	background:url(../images/sprites-icons.png) no-repeat 0 -310px;
 	color:#7c0032;
-	text-shadow:1px 1px 0 #fde8f7;
+
 }
 #content{
 	height:auto;
@@ -86,7 +86,7 @@ p a:hover{
 	width:auto;
 }
 #content span.background{
-	background:url(../images/beautiful-girl.jpg) no-repeat top center;
+	background:url(../images/healthy-BMI.jpg) no-repeat top center;
 	display:block;
 	height:524px;
 }
@@ -95,6 +95,8 @@ p a:hover{
 	margin:-30px auto 0;
 	padding:0 0 0 20px;
 	width:920px;
+	font-family: fantasy;
+
 }
 #content div#home ul{
 	background:#e5dae0;
@@ -276,6 +278,10 @@ p a:hover{
 #content div div div dl dd{
 	line-height:24px;
 	margin:0;
+}
+#content div div#text1 {
+	font-family: fantasy;
+	font-size: 13px;
 }
 #content div div div dl dd a{
 	color:#867F79;
