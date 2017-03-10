@@ -1,0 +1,25 @@
+button {
+    position : absolute;
+    bottom: 10%;
+}
+
+#cmdLoadJSON {
+  left : 100px;
+}
+td {
+    padding : 15px;
+}
+
+th { background-color: lightgrey}
+
+.number {
+    width : 90px;
+}
+
+.odd {
+    background-color: lightcyan;
+}
+
+.even {
+    background-color: lightyellow;
+}
