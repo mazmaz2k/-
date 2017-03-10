@@ -1,5 +1,11 @@
 var xmlPage = function() {
     var parser = new DOMParser();
+    json = require('json-update')
+ 
+json.load('data.json', function(err, obj) {
+  console.log("Loaded from json:");
+  console.log(obj);
+});
     var doc = parser.parseFromString(xmlStr, 'text/xml');
 
   var initModule = function() {
