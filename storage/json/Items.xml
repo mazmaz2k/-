@@ -9,6 +9,16 @@
        <price units = "ils">78.52</price>
         <From>Hong Kong</From>
    </item>
+   <item id = "1362">
+       <name>5 in 1 USB Cable to Serial</name>
+       <price units = "ils">79.52</price>
+        <From>Hodsang Kong</From>
+   </item>
+     <item id = "6278">
+     <name>RetractablGFe USB Data Sync Cable Charger</name>
+     <price units = "ils">56.82</price>
+      <From>ChinGa</From>
+     </item>
     <item id = "4334">
        <name>External USB Cable Adapter</name>
        <price units = "ils">23.52</price>

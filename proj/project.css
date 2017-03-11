@@ -1,7 +1,6 @@
 
 body{
       background-image: url("background.JPG");
-      
 }
 #star{
     color: red;
@@ -30,9 +29,7 @@ input{
 .calc{
     float: left;
     background-image: url("calcpic.JPG");
-     background-color: palegoldenrod;
     border-radius: 15px;
-    margin-left: 20px;
 }
 legend{
     font-size: 20px;

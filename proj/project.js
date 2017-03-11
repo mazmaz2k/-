@@ -139,35 +139,4 @@ var loadPage = function()
     {
         reset();
     });
-
-
-
-
-}
-
-
-
-function hidediv()
-{
-   var mydiv = document.getElementById("mydiv");
-   if (mydiv == null)
-   {
-      alert("Sorry can't find your div");
-      return;
-   }
-   //div found
-   mydiv.style.visibility="hidden";
-}
-
-
-function showdiv()
-{
-   var mydiv = document.getElementById("mydiv");
-   if (mydiv == null)
-   {
-      alert("Sorry can't find your div");
-      return;
-   }
-   //div found
-   mydiv.style.visibility="visible";
 }

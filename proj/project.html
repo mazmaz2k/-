@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>The Healthy Life | About</title>
+
+    <link rel="stylesheet" type="text/css" href="project.css"/>
+    <script src="project.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+</head>
+
+<body onload="loadPage()">
+    <header>
+      
+    </header>
+    <main>
+        <section class="calc">
+            <fieldset> 
+                <legend> Calculate how much calories you should eat per day</legend>
+           <p>
+                <label for="Gender">Gender</label>
+                <input type="radio" id="male" name="Gender" value="Male" checked>Male
+                <input type="radio" id="female" name="Gender" value="Female" >Female
+           </p>
+          
+           <p>
+             
+            <label for="age">Age(years)<span id="star">*</span></label>
+            <input id="age" autofocus required></input>
+            <span id="errAge"></span>
+           </p>
+           <p>
+            <label for="weight">Weight(kg)<span id="star">*</span></label>
+            <input id="weight"  autofocus required></input>
+             <span id="errWeight"></span>
+           </p>
+           <p>
+             <label for="height">Height(cm)<span id="star">*</span></label>
+            <input id="height"  autofocus required ></input>
+             <span id="errHeight"></span>
+           </p>
+           <p>
+                <label for="activity">Activity:</label>
+                <input type="radio" id="Sedentary" name="activity" value="Sedentary" checked>Sedentary
+                <input type="radio" id="Moderate" name="activity" value="Moderate" >Moderate
+                <input type="radio" id="Strenous" name="activity" value="Strenous">Strenous
+           </p>
+           <p>
+            <input id="cmdCalc" type="submit" value="Calculate" />
+            <input id="cmdReset" type="reset" value="Reset"/>
+           </p>
+            </fieldset>
+
+        </section>
+
+    </main>
+
+</body>
+
+
+
+
+
+
+</html>

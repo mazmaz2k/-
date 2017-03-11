@@ -3,11 +3,15 @@
 
 <head>
     <title>The Healthy Life | Calculate</title>
+
+    <script src="js/project.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/project.css" />
+    <script src="js/BMICalculator.results.js"></script>
 </head>
 
-<body>
+<body onload="loadPage()">
     <div id="page">
         <div id="header">
             <div>
@@ -17,7 +21,7 @@
                 <li class="first"><a href="home.html">Home</a></li>
                 <li><a href="CaloriesList.html">Calories List</a></li>
                 <li class="selected"><a href="project.html">calculator</a></li>
-                <li ><a href="about.html">About us</a></li>
+                <li><a href="about.html">About us</a></li>
                 <li class="last"><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
@@ -28,9 +32,9 @@
                         <li class="first">
                             <a href="#"><img src="images/freshly-picked.jpg" alt=""></a> <a href="#">Freshly picked</a> </li>
                         <li>
-                            <a href="#"><img src="images/calories-calculation.jpg" alt=""></a> <a href="#">BMI & Calorie Calculator</a> </li>
+                            <a href="#"><img src="images/calories-calculation.jpg" alt=""></a> <a href="#">BMI & Calorie Calculator</a>                            </li>
                         <li>
-                             <a href="CaloriesList.html"><img src="images/NutritionTV.jpg" alt=""></a> <a href="#"> Calories summary List</a></li>
+                            <a href="CaloriesList.html"><img src="images/NutritionTV.jpg" alt=""></a> <a href="#"> Calories summary List</a></li>
                     </ul>
                 </div>
                 <main class="mainCalc">
@@ -39,37 +43,53 @@
                             <legend> Calculate how much calories you should eat per day</legend>
                             <p>
                                 <label for="Gender">Gender</label>
-                                <input type="radio" name="Gender" value="Male" checked>Male
-                                <input type="radio" name="Gender" value="Female">Female
+                                <input type="radio" id="male" name="Gender" value="Male" checked>Male
+                                <input type="radio" id="female" name="Gender" value="Female">Female
                             </p>
 
                             <p>
 
                                 <label for="age">Age(years)<span id="star">*</span></label>
                                 <input id="age" autofocus required></input>
+                                <span id="errAge"></span>
                             </p>
                             <p>
                                 <label for="weight">Weight(kg)<span id="star">*</span></label>
                                 <input id="weight" autofocus required></input>
+                                <span id="errWeight"></span>
                             </p>
                             <p>
                                 <label for="height">Height(cm)<span id="star">*</span></label>
-                                <input id="weight" autofocus required></input>
+                                <input id="height" autofocus required></input>
+                                <span id="errHeight"></span>
                             </p>
                             <p>
                                 <label for="activity">Activity:</label>
-                                <input type="radio" name="activity" value="Sedentary" checked>Sedentary
-                                <input type="radio" name="activity" value="Moderate">Moderate
-                                <input type="radio" name="activity" value="Strenous">Strenous
+                                <input type="radio" id="Sedentary" name="activity" value="Sedentary" checked>Sedentary
+                                <input type="radio" id="Moderate" name="activity" value="Moderate">Moderate
+                                <input type="radio" id="Strenous" name="activity" value="Strenous">Strenous
                             </p>
                             <p>
-                                <input id="cmd" type="submit" value="Calculate" />
-                                <input id="cmd" type="reset" value="Reset" />
+                                <input id="cmdCalc" type="submit" value="Calculate" onclick="showdiv()" />
+                                <input id="cmdReset" type="reset" value="Reset" onclick="hidediv()" />
                             </p>
                         </fieldset>
 
                     </section>
+                    
+                    <!--section class="calc" id="mydiv" style="visibility:hidden">
+                    <div >
+                        
+                            <p>You need 2,207 Calories/day to maintain your weight.</p>
+            
 
+                    </div>
+                      </section>
+                    <h3>Show/hide Using the Visibility tag</h3>
+                    <form>
+                        <input type="button" value="hide" onclick="hidediv()" />
+                        <input type="button" value="show" onclick="showdiv()" />
+                    </form-->
 
                 </main>
 
