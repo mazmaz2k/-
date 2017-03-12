@@ -42,20 +42,34 @@ var storageAPI = function() {
             return res;
         }
     };
-    
+
     var drop = function(type) {
         if(!catalog[type])
             console.log("No such object " + type);
         else 
+            
             localStorage.removeItem(type);
     };
     
+       var remove= function(ovj,id)
+    {
+        
+        var dataString = localStorage.getItem(ovj);
+        var dataObject = JSON.parse(dataString);
+        if(dataObject[obj.id] = catalog[id])
+            catalog.drop(id);
+    };
+
+
+
+
     return {
         init : init,
         createObject : createObject,
         save : save,
         getAll : getAll,
-        drop : drop
+        drop : drop ,
+        remove :remove 
     };
     
 }();

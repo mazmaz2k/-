@@ -5,6 +5,7 @@ body{
 	margin:0;
 	min-width:960px;
 	padding:0;
+	/*background:url(../images/templatemo_header.png) no-repeat top center;*/
 }
 a{
 	outline:none;
@@ -23,10 +24,13 @@ p a:hover{
 	color:#3f4044;
 }
 #page{
-	background:url(../images/bg-header.png) repeat-x top center;
+
+	/*background:url(../images/bg-header.png) repeat-x top center;*/
+	
 	width:100%;
 }
 #header{
+	
 	height:130px;
 	margin:0 auto;
 	overflow:hidden;
