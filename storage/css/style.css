@@ -114,15 +114,22 @@ p a:hover{
 	margin:0;
 	padding:0;
 	width:280px;
+	position:relative;
+	
 }
 #content div#home ul li{
 	display:block;
 	height:180px;
 	margin:0 10px 10px;
 	position:relative;
+	height: 100%;
+	
 }
+
+
 #content div#home ul li.first{
 	margin:10px;
+	
 }
 #content div#home ul li p{
 	color:#ffffff;
@@ -187,6 +194,8 @@ p a:hover{
 	display:block;
 	padding:20px 0 10px;
 }
+
+
 
 #content div div.aside ul li.first {
 	background:none;
@@ -538,6 +547,7 @@ ontent div div.aside div{
 	line-height:60px;
 	margin:0;
 	text-align:center;
+	
 }
 #footer div p.footnote a{
 	color:#151516;
