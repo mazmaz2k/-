@@ -1,11 +1,11 @@
 var storageAPI = function() {
-    var catalog;
+    var summary;
     
     var init = function() {
         if(window.localStorage) {
-            catalog = {};
+            summary = {};
             for(var i = 0; i < localStorage.length; i++)
-                catalog[localStorage.key(i)] = true;
+                summary[localStorage.key(i)] = true;
             console.log("Storage initiallized");
         }
         else {
@@ -16,11 +16,11 @@ var storageAPI = function() {
     var createObject = function(type) {
         if(!localStorage.getItem(type))
             localStorage.setItem(type, JSON.stringify({}));
-        catalog[type] = true;
+        summary[type] = true;
     };
     
     var save = function(type, obj) {
-        if(!catalog[type])
+        if(!summary[type])
             console.log("No such object " + type);
         else {
             var dataString = localStorage.getItem(type);
@@ -31,7 +31,7 @@ var storageAPI = function() {
     };
     
     var getAll = function(type) {
-        if(!catalog[type])
+        if(!summary[type])
             console.log("No such object " + type);
         else {
             var res = [];
@@ -44,7 +44,7 @@ var storageAPI = function() {
     };
 
     var drop = function(type) {
-        if(!catalog[type])
+        if(!summary[type])
             console.log("No such object " + type);
         else 
             
@@ -56,8 +56,8 @@ var storageAPI = function() {
         
         var dataString = localStorage.getItem(ovj);
         var dataObject = JSON.parse(dataString);
-        if(dataObject[obj.id] = catalog[id])
-            catalog.drop(id);
+        if(dataObject[obj.id] = summary[id])
+            summary.drop(id);
     };
 
 
