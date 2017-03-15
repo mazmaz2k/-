@@ -48,8 +48,13 @@ fieldset{
     color: red;
     font-size: 15px;
     }
-    .result{
+.result{
         font-size: 21px;
         font-family: fantasy;
         color:brown;
-    }
+}
+#textCalc{
+            font-size: 18px;
+        font-family: fantasy;
+        color:black;
+}

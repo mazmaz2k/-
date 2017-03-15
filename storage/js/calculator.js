@@ -46,6 +46,18 @@ function validateInput() {
         res = false;
         errH.html(errNeg);
     }
+    else if (!(Number(h) == h)){
+        res = false;
+         errH.html(errNAN);
+    }
+    else if (!(Number(a) == a) ){
+        res = false;
+         errA.html(errNAN);
+    }
+    else if ( !(Number(w) == w)){
+        res = false;
+         errW.html(errNAN);
+    }
     else
         errH.html("");
 
@@ -63,34 +75,62 @@ function calculateBMI() {
 function calculateBMR() {
     var a = parseInt($("#age").val())
     var w = parseInt($("#weight").val());
+     var w1=w-1; 
+     var w2=w+1;
+    
     var h = parseFloat($("#height").val());
     var res;
-
+    var res1;
+    var res2;
     if (document.getElementById('male').checked) {
-        res = 66 + w * 13.7 + h*5 - a*6.8;
+        res = 66 + w * 13.7 + h * 5 - a * 6.8;
+         res1 = 66 + w1 * 13.7 + h * 5 - a * 6.8;
+         res2 = 655 + w2 * 9.6 + h * 1.8 - a * 4.7;
     }
     else {
-        res = 655 + w*9.6 + h*1.8 -a*4.7;
+        res = 655 + w * 9.6 + h * 1.8 - a * 4.7;
+        res1 = 655 + w1 * 9.6 + h * 1.8 - a * 4.7;
+        res2 = 655 + w2 * 9.6 + h * 1.8 - a * 4.7;
 
     }
-    return res;
+    return [res,res1,res2];
 }
+function bmiInRange() {
+    var res = calculateBMI();
+    if (res < 18.5)
+        return "you are Underweight";
+    else if (res >= 18.5 && res < 25)
+        return "you are in Healthy Weight";
+    else if (res >= 25 && res < 30)
+        return "you are Overweight";
+    else
+        return "you are Obese";
+
+}
+
+
 function calculateTEE() {
     var bmr = calculateBMR();
     var res;
+    var res1;
+    var res2;
     if (document.getElementById('Sedentary').checked) {
-        res = bmr * 1.2;
-
+        res = bmr[0] * 1.2;
+        res1 = bmr[1] * 1.2;
+        res2 = bmr[2] * 1.2;
     }
     else if (document.getElementById('Moderate').checked) {
-        res = bmr * 1.55;
-
+        res = bmr[0] * 1.55;
+          res1 = bmr[1] * 1.55;
+           res2 = bmr[2] * 1.55;
     }
     else {
-        res = bmr * 1.9;
-
+        res = bmr[0] * 1.9;
+        res1 = bmr[1] * 1.9;
+        res2 = bmr[2] * 1.9;
     }
-    return res*1.1;
+    return [res * 1.1, res1 * 1.1, res2 * 1.1];
+
 }
 function reset() {
 
@@ -113,14 +153,14 @@ var loadPage = function () {
             var bmi = calculateBMI();
             var bmr = calculateBMR();
             var tee = calculateTEE();
-            //  alert("The amount of calories you should eat per day is"+tee+"\n");
-            //alert("tee value" + tee + "\n" + "bmr value" + bmr + "\n" + "bmi value" + bmi + "\n");
-           // document.getElementById("#mydiv").childNodes[0].html("tee value" + tee + "\n" + "bmr value" + bmr + "\n" + "bmi value" + bmi + "\n");
+            var bmiConclosion = bmiInRange();
+            var w= parseInt($("#weight").val());
 
-           
-        $("#res").html("Hello,\n your TEE value is:"+ tee + "\n");
-        $("#res").addClass("result");
-        
+
+            $("#res").html("Hello,this Calculator - Calculate daily calorie intake by model BMR and BMI + model combining exercise:"+ "</br>" + "</br>" +"<div id="+"textCalc"+">"+ " Your TEE value is: " + Math.round(tee[0]) +" calorie you will need to consume per day"+ "</br>" + " Your BMR value is: " + Math.round(bmr[0])+" calorie you will need to consume per day" + "</br>" + " Your BMI is " + Math.round(bmi) + " and the conclusion: " + bmiConclosion + "</br>"+"If you would like to weight "+(w-1)+ "Kg you need to eat "+Math.round(tee[1]) + " calorieper day"+ "</br>"+"If you would like to weight "+(w+1)+ "Kg you need to eat "+Math.round(tee[2]) + " calorieper day </div>");
+
+            $("#res").addClass("result");
+
         }
     });
     $("#cmdReset").click(function () {

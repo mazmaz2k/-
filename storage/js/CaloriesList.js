@@ -1,3 +1,11 @@
+
+  function popitup(url) {
+	newwindow=window.open(url,'name','height=600,width=650');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+
 window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer", {            
       title:{
@@ -86,11 +94,6 @@ var caloriesList = function () {
 
     };
 
-    //alert("ss");
-
-
-
-
 
     var newList = function () {
         var answer = confirm("Creating a new list will erase existing list. Are you sure you want to create a new list?");
@@ -110,4 +113,6 @@ var caloriesList = function () {
 }();
 
 $(document).ready(caloriesList.initModule);
-    
+
+
+

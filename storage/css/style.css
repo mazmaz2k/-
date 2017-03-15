@@ -156,6 +156,10 @@ p a:hover{
 	color:#7c0032;
 	text-decoration:none;
 }
+#content div#home div p a{
+	color:-webkit-link;
+	
+}
 #content div#home div h1 span{
 	color:#83756a;
 }
@@ -319,13 +323,15 @@ p a:hover{
 	color:#7c0032;
 }
 #content div div span{
+	margin-top:53px;
 	display:block;
 	font-size:18px;
 	color:#7c0032;
 }
 #content div div p{
-	margin-top:0;
-	margin-bottom:20px;
+	margin-top:3px;
+	margin-bottom:4px;
+	font-size: 15px;
 }
 #content div div h3{
 	color:#7c0032;
