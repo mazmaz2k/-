@@ -3,7 +3,7 @@ var caloriesList = function () {
     var initModule = function () {
         $("#cmdAdd").click(add);
         $("#cmdNew").click(newList);
-        $("#cmdRemove").click(remove);
+
         storageAPI.init();
         storageAPI.createObject("Calories");
 
@@ -24,13 +24,24 @@ var caloriesList = function () {
         });
     };
 
-    var add = function () {
+    var add = function () 
+    {
 
         var quantity = $("#txtQuantity").val();
 
-        if (quantity < 0 || quantity > 2e10 || !(Number(quantity) == quantity)) {
-            alert("not a namber");
-        } else {
+        if (quantity < 0 ) 
+         {
+                alert("please enter positive number");
+         }
+         else if( !(Number(quantity) == quantity))
+         {
+                alert("please enter a number");
+         }
+        else if(quantity=="")
+        {
+            alert("please enter amount of calories!");
+        }
+         else {
             var date = $("#txtDate").val();
             var item = { id: date, quantity: quantity };
             storageAPI.save("Calories", item);
@@ -41,13 +52,7 @@ var caloriesList = function () {
     };
 
 
-    var remove = function () {
-        var Calories = storageAPI.getAll("Calories");
-        var date = $("#txtDelete").val();
-      /*  alert(date);*/
-        storageAPI.remove(Calories,date);
 
-    };
 
 
     var newList = function () {

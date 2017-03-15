@@ -1,0 +1,42 @@
+tr {
+}
+
+th 
+{
+     background-color: lightgrey;
+
+     font-size: 18px;
+}
+
+table{
+    width: 100%;
+
+}
+td{
+    text-align: center;
+    background-color:darkkhaki;
+
+    font-size: 16px;
+}
+#lblDate , #lblQuantity
+{
+    font-size: 20px;
+    font-family: fantasy;
+}
+#txtDate , #txtQuantity
+{
+    border-radius: 6px;
+    width: 160px;
+}
+#inputCalories{
+
+    text-align: center;
+}
+#cmdAdd , #cmdNew
+{
+    border-radius:8px;
+    background-color:darkblue;
+    color: blanchedalmond;
+    width: 70px;
+    height: 30px;  
+}
