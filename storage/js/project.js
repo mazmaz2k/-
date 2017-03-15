@@ -67,10 +67,10 @@ function calculateBMR() {
     var res;
 
     if (document.getElementById('male').checked) {
-        res = 66 + w * 13.8 + h * 5 - a * 6.8;
+        res = 66 + w * 13.7 + h*5 - a*6.8;
     }
     else {
-        res = 655 + w * 9.6 + h * 1.8 - a * 4.7;
+        res = 655 + w*9.6 + h*1.8 -a*4.7;
 
     }
     return res;
@@ -90,7 +90,7 @@ function calculateTEE() {
         res = bmr * 1.9;
 
     }
-    return res;
+    return res*1.1;
 }
 function reset() {
 
@@ -100,6 +100,7 @@ function reset() {
     $("#errAge").html("");
     $("#errWeight").html("");
     $("#errHeight").html("");
+    $("#res").html("");
     //maybe change the radio buttons
 
     //   location.reload();
@@ -113,7 +114,13 @@ var loadPage = function () {
             var bmr = calculateBMR();
             var tee = calculateTEE();
             //  alert("The amount of calories you should eat per day is"+tee+"\n");
-            alert("tee value" + tee + "\n" + "bmr value" + bmr + "\n" + "bmi value" + bmi + "\n");
+            //alert("tee value" + tee + "\n" + "bmr value" + bmr + "\n" + "bmi value" + bmi + "\n");
+           // document.getElementById("#mydiv").childNodes[0].html("tee value" + tee + "\n" + "bmr value" + bmr + "\n" + "bmi value" + bmi + "\n");
+
+           
+        $("#res").html("Hello,\n your TEE value is:"+ tee + "\n");
+        $("#res").addClass("result");
+        
         }
     });
     $("#cmdReset").click(function () {
@@ -126,7 +133,7 @@ var loadPage = function () {
 }
 
 
-
+/*
 function hidediv() {
     var mydiv = document.getElementById("mydiv");
     if (mydiv == null) {
@@ -158,4 +165,4 @@ function myMap() {
     animation: google.maps.Animation.BOUNCE
   });
   marker.setMap(map);
-}
+}*/

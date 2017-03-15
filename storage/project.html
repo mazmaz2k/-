@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/project.css" />
-    <script src="js/BMICalculator.results.js"></script>
+    
 </head>
 
 <body onload="loadPage()">
@@ -72,26 +72,15 @@
                                 <input type="radio" id="Strenous" name="activity" value="Strenous">Strenous
                             </p>
                             <p>
-                                <input id="cmdCalc" type="submit" value="Calculate" onclick="showdiv()" />
-                                <input id="cmdReset" type="reset" value="Reset" onclick="hidediv()" />
+                                <input id="cmdCalc" type="submit" value="Calculate"  />
+                                <input id="cmdReset" type="reset" value="Reset" />
                             </p>
-                        </fieldset>
+                            <div id="res">
 
-                    </section>
-
-                    <section class="calc" id="mydiv" style="visibility:hidden">
-                        <div>
-
-                            <p>You need 2,207 Calories/day to maintain your weight.</p>
-
+                        
 
                         </div>
-                    </section>
-                    <h3>Show/hide Using the Visibility tag</h3>
-                    <form>
-                        <input type="button" value="hide" onclick="hidediv()" />
-                        <input type="button" value="show" onclick="showdiv()" />
-                        </form->
+                        </fieldset>
 
                 </main>
                 <div id="text1">

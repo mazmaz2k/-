@@ -1,6 +1,6 @@
 
 body{
-      background-image: url("background.JPG");
+     /* background-image: url("background.JPG");*/
       
 }
 #star{
@@ -29,7 +29,7 @@ input{
 }
 .calc{
     float: left;
-    background-image: url("calcpic.JPG");
+   
      background-color: palegoldenrod;
     border-radius: 15px;
     margin-left: 20px;
@@ -43,9 +43,13 @@ legend{
 fieldset{
     border: 1px solid #002222;
     border-radius:10px; 
-    width: 600px;
 }
 #errAge ,#errWeight ,#errHeight{
     color: red;
     font-size: 15px;
+    }
+    .result{
+        font-size: 21px;
+        font-family: fantasy;
+        color:brown;
     }
