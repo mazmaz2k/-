@@ -1,54 +1,56 @@
 
-  function popitup(url) {
-	newwindow=window.open(url,'name','height=600,width=650');
-	if (window.focus) {newwindow.focus()}
-	return false;
+function popitup(url) {
+    newwindow = window.open(url, 'name', 'height=600,width=650');
+    if (window.focus) { newwindow.focus() }
+    return false;
 }
 
 
 window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer", {            
-      title:{
-        text: "Fruits sold in First & Second Quarter"              
-      },
 
-      data: [  //array of dataSeries     
-      { //dataSeries - first quarter
-   /*** Change type "column" to "bar", "area", "line" or "pie"***/        
-       type: "column",
-       name: "First Quarter",
-       dataPoints: [
-       { label: "banana", y: 18 },
-       { label: "orange", y: 29 },
-       { label: "apple", y: 40 },                                    
-       { label: "mango", y: 34 },
-       { label: "grape", y: 24 }
-       ]
-     },
-     { //dataSeries - second quarter
+    var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+            text: "Fruits sold in First & Second Quarter"
+        },
 
-      type: "column",
-      name: "Second Quarter",                
-      dataPoints: [
-      { label: "banana", y: 23 },
-      { label: "orange", y: 33 },
-      { label: "apple", y: 48 },                                    
-      { label: "mango", y: 37 },
-      { label: "grape", y: 20 }
-      ]
-    }
-    ]
-  });
+        data: [  //array of dataSeries     
+            { //dataSeries - first quarter
+                /*** Change type "column" to "bar", "area", "line" or "pie"***/
+                type: "column",
+                name: "First Quarter",
+                dataPoints: [
+                    { label: "banana", y: 18 },
+                    { label: "orange", y: 29 },
+                    { label: "apple", y: 40 },
+                    { label: "mango", y: 34 },
+                    { label: "grape", y: 24 }
+                ]
+            },
+            { //dataSeries - second quarter
+
+                type: "column",
+                name: "Second Quarter",
+                dataPoints: [
+                    { label: "banana", y: 23 },
+                    { label: "orange", y: 33 },
+                    { label: "apple", y: 48 },
+                    { label: "mango", y: 37 },
+                    { label: "grape", y: 20 }
+                ]
+            }
+        ]
+    });
 
     chart.render();
-  }
+}
 
 var caloriesList = function () {
+    var listArr = [];
 
     var initModule = function () {
         $("#cmdAdd").click(add);
         $("#cmdNew").click(newList);
-     //   $("#createChart").click(createChart);
+        //   $("#createChart").click(createChart);
 
         storageAPI.init();
         storageAPI.createObject("Calories");
@@ -58,6 +60,7 @@ var caloriesList = function () {
 
 
     var fillTable = function () {
+
         var Calories = storageAPI.getAll("Calories");
         if (Calories.length == 0)
             return;
@@ -88,6 +91,8 @@ var caloriesList = function () {
             var date = $("#txtDate").val();
             var item = { id: date, quantity: quantity };
             storageAPI.save("Calories", item);
+            listArr.push([date, quantity]);
+            alert(listArr[0]);
             fillTable();
         }
 
@@ -103,12 +108,14 @@ var caloriesList = function () {
         storageAPI.createObject("Calories");
         location.reload();
         fillTable();
+        delete listArr;
     };
 
 
 
     return {
         initModule: initModule,
+        listArr: listArr,
     };
 }();
 

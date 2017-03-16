@@ -1,6 +1,7 @@
 var storageAPI = function() {
     var summary;
     
+    
     var init = function() {
         if(window.localStorage) {
             summary = {};
