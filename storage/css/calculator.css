@@ -58,3 +58,11 @@ fieldset{
         font-family: fantasy;
         color:black;
 }
+#red{
+    display: inline;
+    color: red;
+}
+#green{
+    display: inline;
+    color: green;
+}

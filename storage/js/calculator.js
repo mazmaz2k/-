@@ -85,7 +85,7 @@ function calculateBMR() {
     if (document.getElementById('male').checked) {
         res = 66 + w * 13.7 + h * 5 - a * 6.8;
          res1 = 66 + w1 * 13.7 + h * 5 - a * 6.8;
-         res2 = 655 + w2 * 9.6 + h * 1.8 - a * 4.7;
+         res2 = 66 + w2 * 13.7 + h * 5 - a * 6.8;
     }
     else {
         res = 655 + w * 9.6 + h * 1.8 - a * 4.7;
@@ -98,13 +98,13 @@ function calculateBMR() {
 function bmiInRange() {
     var res = calculateBMI();
     if (res < 18.5)
-        return "you are Underweight";
+        return "<div id="+"red"+">"+"you are Underweight</div>";
     else if (res >= 18.5 && res < 25)
-        return "you are in Healthy Weight";
+        return "<div id="+"green"+">"+"you are in Healthy Weight</div>";
     else if (res >= 25 && res < 30)
-        return "you are Overweight";
+        return "<div id="+"red"+">"+"you are Overweight</div>";
     else
-        return "you are Obese";
+        return "<div id="+"red"+">"+"you are Obese</div>";
 
 }
 
@@ -157,7 +157,7 @@ var loadPage = function () {
             var w= parseInt($("#weight").val());
 
 
-            $("#res").html("Hello,this Calculator - Calculate daily calorie intake by model BMR and BMI + model combining exercise:"+ "</br>" + "</br>" +"<div id="+"textCalc"+">"+ " Your TEE value is: " + Math.round(tee[0]) +" calorie you will need to consume per day"+ "</br>" + " Your BMR value is: " + Math.round(bmr[0])+" calorie you will need to consume per day" + "</br>" + " Your BMI is " + Math.round(bmi) + " and the conclusion: " + bmiConclosion + "</br>"+"If you would like to weight "+(w+1)+ "Kg you need to eat "+Math.round(tee[1]) + " calorieper day"+ "</br>"+"If you would like to weight "+(w-1)+ "Kg you need to eat "+Math.round(tee[2]) + " calorieper day </div>");
+            $("#res").html("Hello,this Calculator - Calculate daily calorie intake by model BMR and BMI + model combining exercise:"+ "</br>" + "</br>" +"<div id="+"textCalc"+">"+ " Your TEE value is: " + Math.round(tee[0]) +" calorie you will need to consume per day."+ "</br>" + " Your BMR value is: " + Math.round(bmr[0])+" calorie you will need to consume per day." + "</br>" + " Your BMI is " + Math.round(bmi) + " and the conclusion: " + bmiConclosion + ".</br>"+"If you would like to weight "+(w-1)+ "Kg you need to eat "+Math.round(tee[1]) + " calorieper day."+ "</br>"+"If you would like to weight "+(w+1)+ "Kg you need to eat "+Math.round(tee[2]) + " calorieper day. </div>");
 
             $("#res").addClass("result");
 
