@@ -157,7 +157,7 @@ var loadPage = function () {
             var w= parseInt($("#weight").val());
 
 
-            $("#res").html("Hello,this Calculator - Calculate daily calorie intake by model BMR and BMI + model combining exercise:"+ "</br>" + "</br>" +"<div id="+"textCalc"+">"+ " Your TEE value is: " + Math.round(tee[0]) +" calorie you will need to consume per day"+ "</br>" + " Your BMR value is: " + Math.round(bmr[0])+" calorie you will need to consume per day" + "</br>" + " Your BMI is " + Math.round(bmi) + " and the conclusion: " + bmiConclosion + "</br>"+"If you would like to weight "+(w-1)+ "Kg you need to eat "+Math.round(tee[1]) + " calorieper day"+ "</br>"+"If you would like to weight "+(w+1)+ "Kg you need to eat "+Math.round(tee[2]) + " calorieper day </div>");
+            $("#res").html("Hello,this Calculator - Calculate daily calorie intake by model BMR and BMI + model combining exercise:"+ "</br>" + "</br>" +"<div id="+"textCalc"+">"+ " Your TEE value is: " + Math.round(tee[0]) +" calorie you will need to consume per day"+ "</br>" + " Your BMR value is: " + Math.round(bmr[0])+" calorie you will need to consume per day" + "</br>" + " Your BMI is " + Math.round(bmi) + " and the conclusion: " + bmiConclosion + "</br>"+"If you would like to weight "+(w+1)+ "Kg you need to eat "+Math.round(tee[1]) + " calorieper day"+ "</br>"+"If you would like to weight "+(w-1)+ "Kg you need to eat "+Math.round(tee[2]) + " calorieper day </div>");
 
             $("#res").addClass("result");
 
