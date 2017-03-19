@@ -111,7 +111,7 @@ window.onload = function () {
     }
 
     sortTxt(listArr);
-    
+
     var average1 = function () {
         var sum = 0;
         for (var i = 0; i < listArr.length; i++) {
@@ -122,20 +122,23 @@ window.onload = function () {
 
 
     var showgh = function () {
-        var a = [];
+        var arr = [];
         for (var i = 0; i < listArr.length; i++) {
-            if (i % 5 != 1)
-                a.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: listArr[i].quantity.toString() });
-            else
-                a.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: "" });
+            if (i == 0)
+                arr.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: "start of diet", indexLabelOrientation: "vertical", indexLabelFontColor: "orangered", markerColor: "orangered" });
+            else //if (i % 5 != )
+                arr.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: listArr[i].quantity.toString() });
+           /* else
+                arr.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: "" });*/
 
         }
-        return a;
+        return arr;
     }
-     var averageLine = function () {
+
+    var averageLine = function () {
         var a = [];
         for (var i = 0; i < listArr.length; i++) {
-                a.push({ x: listArr[i].id, y: average1(), indexLabel: "" });
+            a.push({ x: listArr[i].id, y: average1(), indexLabel: "" });
 
         }
         return a;
@@ -144,29 +147,30 @@ window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer",
         {
             title: {
-                text: "Growth of calories + average "
+                text: "Growth of calories + average amount"
             },
             animationEnabled: true,
             axisX: {
-                valueFormatString: "DD-MMM-YYYY",
-
+                valueFormatString: "DDDDDD-MMM-YYYY",
                 intervalType: "date",
                 labelAngle: -50,
-                labelFontColor: "rgb(0,75,141)"
+                labelFontColor: "rgb(0,75,141)",
+                minimum: listArr[0].id
+
             },
             axisY: {
                 title: "amount of calories",
                 interlacedColor: "#F0FFFF",
                 tickColor: "azure",
                 titleFontColor: "rgb(0,75,141)",
-                valueFormatString: "#.C",
+                valueFormatString: "#.Cal",
                 interval: 1000
 
             },
             data: [
                 {
                     indexLabelFontColor: "darkSlateGray",
-                    name: 'views',
+                    name: 'calories',
                     type: "area",
                     color: "rgba(0,75,141,0.7)",
                     markerSize: 10,
@@ -175,11 +179,11 @@ window.onload = function () {
 
             ]
         });
-    
-    
+
+
     chart.addTo("data", { type: "line", dataPoints: averageLine() });
     chart.render();
-  
-   
+
+
 
 } 

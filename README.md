@@ -20,8 +20,8 @@ Main functions:
 	After filling the inputs you have a button "calculate" after pressing it you will get the result
 	you also have a button "reset" to reset your input.
 
-*	This site also contains a follow up ("calories list")for the user 
-	the user can add a Date and an amount of calories he consumed in this date
+*	This site also contains a follow up ("calories list")for the user calories. 
+	the user can add a Date and the amount of calories he consumed in this date
 	and the site will save the info and present to the user in a table
 	
 *	The user also can watch his activity by a charts by clicking the button "create chart". ther we also calculate the         avarage amount of calories you consume for all the registered dates.
