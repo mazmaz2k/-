@@ -34,7 +34,7 @@ input{
     border-radius: 15px;
     margin-left: 20px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-   font-variant: small-caps;
+  
    font-weight: bold;
    font-size: 12px;
 }
@@ -54,13 +54,16 @@ fieldset{
     }
 .result{
         font-size: 21px;
-        font-family: fantasy;
+        font-weight: bold;
+           font-weight:normal;
+
         color:brown;
 }
 #textCalc{
             font-size: 18px;
         font-family: fantasy;
         color:black;
+          font-weight:normal;
 }
 #red{
     display: inline;
