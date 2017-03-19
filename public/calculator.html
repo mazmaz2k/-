@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Healthy Life | Calculate</title>
+
+    <script src="js/calculator.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/calculator.css" />
+    
+</head>
+
+<body onload="loadPage()">
+
+    <div id="page">
+
+        <div id="header">
+            <div>
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <ul>
+                <li class="first"><a href="index.html">Home</a></li>
+                <li><a href="CaloriesList.html">Calories List</a></li>
+                <li class="selected"><a href="calculator.html">calculator</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li class="last"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div>
+                <div class="aside">
+                    <ul>
+                        <li class="first">
+                            <a href="#"><img src="images/freshly-picked.jpg" alt=""></a> <a href="#">Freshly picked</a> </li>
+                        <li>
+                            <a href="#"><img src="images/calories-calculation.jpg" alt=""></a> <a href="#">BMI & Calorie Calculator</a>                            </li>
+                        <li>
+                            <a href="CaloriesList.html"><img src="images/NutritionTV.jpg" alt=""></a> <a href="#"> Calories summary List</a></li>
+                    </ul>
+                </div>
+                <main class="mainCalc">
+                    <section class="calc">
+                        <fieldset>
+                            <legend id="cl"> Calculate how much calories you should eat per day</legend>
+                            <p>
+                                <label for="Gender">Gender</label>
+                                <input type="radio" id="male" name="Gender" value="Male" checked>Male
+                                <input type="radio" id="female" name="Gender" value="Female">Female
+                            </p>
+
+                            <p>
+
+                                <label for="age">Age(years)<span id="star">*</span></label>
+                                <input id="age" autofocus required></input>
+                                <span id="errAge"></span>
+                            </p>
+                            <p>
+                                <label for="weight">Weight(kg)<span id="star">*</span></label>
+                                <input id="weight" autofocus required></input>
+                                <span id="errWeight"></span>
+                            </p>
+                            <p>
+                                <label for="height">Height(cm)<span id="star">*</span></label>
+                                <input id="height" autofocus required></input>
+                                <span id="errHeight"></span>
+                            </p>
+                            <p>
+                                <label for="activity">Activity:</label>
+                                <input type="radio" id="Sedentary" name="activity" value="Sedentary" checked>Sedentary
+                                <input type="radio" id="Moderate" name="activity" value="Moderate">Moderate
+                                <input type="radio" id="Strenous" name="activity" value="Strenous">Strenous
+                            </p>
+                            <p>
+                                <input id="cmdCalc" type="submit" value="Calculate"  />
+                                <input id="cmdReset" type="reset" value="Reset" />
+                            </p>
+                            <div id="res">
+
+                        
+
+                        </div>
+                        </fieldset>
+
+                </main>
+                <div id="text1">
+                    <span>Note:</span>
+                    <p> Please be advised that this calculator is not intended for those under the age of 18, under 1m tall
+                        and 2.1m tall and over. This is due to the fact that those under the age of 18 are most likely still
+                        growing and weight fluctuations are to be expected. If you are under the age of 18, less than 1m
+                        tall and 2.11m and over, please do not use the calculator. You will receive an inaccurate weight.
+                        Thank you for your understanding.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <div>
+                <div>
+                    <div>
+                        <div class="first">
+                            <h3>Newsletter</h3>
+                            <p>We've made the following tools available to both readers and website owners alike.</brt>
+                                Our RSS feeds are ideal for catching up with The Healthy Life through your own reading platform, or those on offer by Feedly,
+                                Newsblur, etc. <a class="more" href="#">Read more</a></p>
+
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Jacob Sriibom 26, Jerusalem.</p>
+                        </div>
+                        <div>
+                            <h3>Follow us</h3>
+                            <ul>
+                                <li><a href="https://www.facebook.com/" class="facebook">Facebook</a></li>
+                                <li><a href="#" class="subscribe">Subscribe</a></li>
+                                <li><a href="https://twitter.com/" class="twitter">Twitter</a></li>
+                                <li><a href="https://www.flickr.com/" class="flicker">Flicker</a></li>
+                            </ul>
+                            <span>+972-26588060</span> </div>
+                    </div>
+                </div>
+                <p class="footnote">Copyright &copy; <a href="#">omri mizrahi adi tayri</a> - All Rights Reserved | Look us up in <a target="_blank"
+                        href="https://www.jce.ac.il/">https://www.jce.ac.il/</a></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

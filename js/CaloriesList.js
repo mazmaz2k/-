@@ -1,6 +1,6 @@
 
 function popitup(url) {
-    newwindow = window.open(url, 'name', 'height=600,width=650');
+    newwindow = window.open(url, 'name', 'height=400,width=650');
     if (window.focus) { newwindow.focus() }
     return false;
 }
@@ -124,7 +124,7 @@ window.onload = function () {
     var showgh = function () {
         var a = [];
         for (var i = 0; i < listArr.length; i++) {
-            if (i % 5 != 0)
+            if (i % 5 != 1)
                 a.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: listArr[i].quantity.toString() });
             else
                 a.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: "" });
@@ -144,7 +144,7 @@ window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer",
         {
             title: {
-                text: "Growth of calories "
+                text: "Growth of calories + average "
             },
             animationEnabled: true,
             axisX: {
