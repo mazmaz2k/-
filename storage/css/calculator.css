@@ -33,6 +33,10 @@ input{
      background-color: palegoldenrod;
     border-radius: 15px;
     margin-left: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+   font-variant: small-caps;
+   font-weight: bold;
+   font-size: 12px;
 }
 legend{
     font-size: 20px;
@@ -65,4 +69,12 @@ fieldset{
 #green{
     display: inline;
     color: green;
+}
+#cl{
+      text-align: center;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   font-variant: small-caps;
+   font-weight: bold;
+    font-size: 18px;
 }

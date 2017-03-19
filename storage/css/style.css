@@ -158,6 +158,7 @@ p a:hover{
 }
 #content div#home div p a{
 	color:-webkit-link;
+	font-style: italic;
 	
 }
 #content div#home div h1 span{
@@ -359,7 +360,7 @@ ontent div div.aside div{
 	width:120px;
 }
 #content div div.aside div ol li a{
-	color:#A0496C;
+	color:#151516;
 	display:block;
 	line-height:120px;
 	text-decoration:none;

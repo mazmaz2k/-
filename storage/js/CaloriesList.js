@@ -54,12 +54,16 @@ var caloriesList = function () {
         }
         else {
             var date = $("#txtDate").val();
-            var item = { id: date, quantity: quantity };
-            storageAPI.save("Calories", item);
+            if (date == "") {
+                alert("please enter date");
 
-            fillTable();
+            } else {
+                var item = { id: date, quantity: quantity };
+                storageAPI.save("Calories", item);
+                fillTable();
+            }
+
         }
-
 
     };
 
@@ -107,51 +111,16 @@ window.onload = function () {
     }
 
     sortTxt(listArr);
-
-
-    /*
     
-        var chart = new CanvasJS.Chart("chartContainer", {
-    
-            title:
-            {
-                text: "last week chart"
-            },
-    
-            axisY:
-            {
-                title: "amount of calories",
-            },
-    
-            data:
-            [
-                {
-                    type: "column",
-                    dataPoints:
-                    [
-                        { label: "sunday", y: listArr[0].quantity },
-                        { label: "monday", y: listArr[1].quantity },
-                        { label: "tuesday", y: listArr[2].quantity },
-                        { label: "wednesday", y: listArr[3].quantity },
-                        { label: "thursday", y: listArr[4].quantity },
-                        { label: "friday", y: listArr[5].quantity },
-                        { label: "saturday", y: listArr[6].quantity },
-                    ]
-                }
-            ]
-    
-        });
-    
-        chart.render();
-        console.log(listArr);
-    */
-    var average = function () {
+    var average1 = function () {
         var sum = 0;
-        for (var i = 0; i << listArr.length; i++) {
+        for (var i = 0; i < listArr.length; i++) {
             sum += listArr[i].quantity;
         }
         return sum / (listArr.length);
     }
+
+
     var showgh = function () {
         var a = [];
         for (var i = 0; i < listArr.length; i++) {
@@ -159,6 +128,14 @@ window.onload = function () {
                 a.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: listArr[i].quantity.toString() });
             else
                 a.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: "" });
+
+        }
+        return a;
+    }
+     var averageLine = function () {
+        var a = [];
+        for (var i = 0; i < listArr.length; i++) {
+                a.push({ x: listArr[i].id, y: average1(), indexLabel: "" });
 
         }
         return a;
@@ -198,8 +175,11 @@ window.onload = function () {
 
             ]
         });
+    
+    
+    chart.addTo("data", { type: "line", dataPoints: averageLine() });
     chart.render();
-
-
+  
+   
 
 } 
