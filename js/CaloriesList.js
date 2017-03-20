@@ -46,6 +46,9 @@ var caloriesList = function () {
         if (quantity < 0) {
             alert("please enter positive number");
         }
+        else if (quantity>1000000) {
+            alert("please enter a smaller number");
+        }
         else if (!(Number(quantity) == quantity)) {
             alert("please enter a number");
         }
@@ -90,7 +93,7 @@ var caloriesList = function () {
 $(document).ready(caloriesList.initModule);
 
 
-
+/*
 window.onload = function () {
     listArr = storageAPI.getAll("Calories");
     for (var i = 0; i < listArr.length; i++) {
@@ -131,7 +134,7 @@ window.onload = function () {
            /* else
                 arr.push({ x: listArr[i].id, y: listArr[i].quantity, indexLabel: "" });*/
 
-        }
+    /*    }
         return arr;
     }
 
@@ -179,11 +182,10 @@ window.onload = function () {
 
             ]
         });
-
-
-    chart.addTo("data", { type: "line", dataPoints: averageLine() });
+    chart.addTo("data", { type: "line",  dataPoints: averageLine() } );
+    chart.addTo("animationEnabled", true );
     chart.render();
 
 
 
-} 
+} */

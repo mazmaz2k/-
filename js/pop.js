@@ -1,99 +1,4 @@
 
-function popitup(url) {
-    newwindow = window.open(url, 'name', 'height=400,width=650');
-    if (window.focus) { newwindow.focus() }
-    return false;
-}
-
-
-
-
-var listArr;
-var caloriesList = function () {
-
-
-    var initModule = function () {
-        $("#cmdAdd").click(add);
-        $("#cmdNew").click(newList);
-        //   $("#createChart").click(createChart);
-
-        storageAPI.init();
-        storageAPI.createObject("Calories");
-
-        fillTable();
-    };
-
-
-    var fillTable = function () {
-
-        var Calories = storageAPI.getAll("Calories");
-        if (Calories.length == 0)
-            return;
-
-        $("tr:gt(0)").remove();
-
-        $.each(Calories, function (i, item) {
-            var row = "<tr><td>" + (i + 1) + "</td><td>" + item.id + "</td><td>" + item.quantity + "</td></tr>";
-            $("tr:last").after(row);
-        });
-
-    };
-
-    var add = function () {
-
-        var quantity = $("#txtQuantity").val();
-
-        if (quantity < 0) {
-            alert("please enter positive number");
-        }
-        else if (quantity>1000000) {
-            alert("please enter a smaller number");
-        }
-        else if (!(Number(quantity) == quantity)) {
-            alert("please enter a number");
-        }
-        else if (quantity == "") {
-            alert("please enter amount of calories!");
-        }
-        else {
-            var date = $("#txtDate").val();
-            if (date == "") {
-                alert("please enter date");
-
-            } else {
-                var item = { id: date, quantity: quantity };
-                storageAPI.save("Calories", item);
-                fillTable();
-            }
-
-        }
-
-    };
-
-
-    var newList = function () {
-        var answer = confirm("Creating a new list will erase existing list. Are you sure you want to create a new list?");
-        if (answer === false)
-            return;
-        storageAPI.drop("Calories");
-        storageAPI.createObject("Calories");
-        location.reload();
-        fillTable();
-        delete listArr;
-    };
-
-
-
-    return {
-        initModule: initModule,
-
-    };
-}();
-
-$(document).ready(caloriesList.initModule);
-
-
-
 window.onload = function () {
     listArr = storageAPI.getAll("Calories");
     for (var i = 0; i < listArr.length; i++) {
@@ -182,8 +87,6 @@ window.onload = function () {
 
             ]
         });
-
-
     chart.addTo("data", { type: "line",  dataPoints: averageLine() } );
     chart.addTo("animationEnabled", true );
     chart.render();
