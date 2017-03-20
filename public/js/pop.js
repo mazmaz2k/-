@@ -83,12 +83,12 @@ window.onload = function () {
                     color: "rgba(0,75,141,0.7)",
                     markerSize: 10,
                     dataPoints: showgh()
-                }
+                },{ type: "line",  dataPoints: averageLine() }
 
             ]
         });
-    chart.addTo("data", { type: "line",  dataPoints: averageLine() } );
-    chart.addTo("animationEnabled", true );
+   // chart.addTo("data", { type: "line",  dataPoints: averageLine() } );
+ //  chart.addTo("animationEnabled", true );
     chart.render();
 
 
