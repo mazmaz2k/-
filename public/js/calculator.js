@@ -1,5 +1,7 @@
+  /*-Omri mizrahi 303082549
+  Adi tayri 205530967   */
 
-
+//checks if the input the user entered in the calculator is valid
 
 function validateInput() {
 
@@ -7,13 +9,13 @@ function validateInput() {
     var w = $("#weight").val();
     var h = $("#height").val();
     var res = true;
-    var errNull = "Must contain a value";
-    var errNeg = "Value must be positive";
-    var errNAN = "please enter a number";
+    var errNull = "Must contain a value"; //user did not enter a value
+    var errNeg = "Value must be positive"; //negetive value canoot be as an input
+    var errNAN = "please enter a number"; //not a number error
     var errA = $("#errAge");
     var errW = $("#errWeight");
     var errH = $("#errHeight");
-    if (a == "") {
+    if (a == "") {  //checks all the conditions
         res = false;
         errA.html(errNull);
     }
@@ -64,6 +66,9 @@ function validateInput() {
     return res;
 }
 
+
+//calculate the bmi value 
+
 function calculateBMI() {
     var w = parseInt($("#weight").val());
     var h = parseFloat($("#height").val());
@@ -72,6 +77,7 @@ function calculateBMI() {
     return res;
 }
 
+//calculate the bmr value
 function calculateBMR() {
     var a = parseInt($("#age").val())
     var w = parseInt($("#weight").val());
@@ -95,6 +101,7 @@ function calculateBMR() {
     }
     return [res,res1,res2];
 }
+//check the range of the bmi input
 function bmiInRange() {
     var res = calculateBMI();
     if (res < 18.5)
@@ -108,7 +115,7 @@ function bmiInRange() {
 
 }
 
-
+//calculate the TEE value accurding thev furmula 
 function calculateTEE() {
     var bmr = calculateBMR();
     var res;
@@ -132,6 +139,7 @@ function calculateTEE() {
     return [res * 1.1, res1 * 1.1, res2 * 1.1];
 
 }
+//reset the input places into null
 function reset() {
 
     $("#age").val('');
@@ -141,13 +149,11 @@ function reset() {
     $("#errWeight").html("");
     $("#errHeight").html("");
     $("#res").html("");
-    //maybe change the radio buttons
 
-    //   location.reload();
 }
 
 var loadPage = function () {
-    $("#cmdCalc").click(function () {
+    $("#cmdCalc").click(function () { //if user clicked calculate
         var res = validateInput();
         if (res) {
             var bmi = calculateBMI();
@@ -156,14 +162,14 @@ var loadPage = function () {
             var bmiConclosion = bmiInRange();
             var w= parseInt($("#weight").val());
 
-
+            // return string to html accurding all the results
             $("#res").html("Hello,this Calculator - Calculate daily calorie intake by model BMR and BMI + model combining exercise:"+ "</br>" + "</br>" +"<div id="+"textCalc"+">"+ " Your TEE value is: " + Math.round(tee[0]) +" calorie you will need to consume per day."+ "</br>" + " Your BMR value is: " + Math.round(bmr[0])+" calorie you will need to consume per day." + "</br>" + " Your BMI is " + Math.round(bmi) + " and the conclusion: " + bmiConclosion + ".</br>"+"If you would like to weight "+(w-1)+ "Kg you need to eat "+Math.round(tee[1]) + " calorieper day."+ "</br>"+"If you would like to weight "+(w+1)+ "Kg you need to eat "+Math.round(tee[2]) + " calorieper day. </div>");
 
             $("#res").addClass("result");
 
         }
     });
-    $("#cmdReset").click(function () {
+    $("#cmdReset").click(function () { //when the user clicked "reset"
         reset();
     });
 

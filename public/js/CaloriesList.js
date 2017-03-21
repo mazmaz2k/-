@@ -1,4 +1,8 @@
+/*-Omri mizrahi 303082549
+Adi tayri 205530967   */
 
+
+//function that call the popup new window
 function popitup(url) {
     newwindow = window.open(url, 'name', 'height=400,width=650');
     if (window.focus) { newwindow.focus() }
@@ -8,9 +12,9 @@ function popitup(url) {
 
 
 
-var listArr;
+var listArr; //array that contain the storage data -id:date quantity
 var caloriesList = function () {
-
+    //the local storag initilization
 
     var initModule = function () {
         $("#cmdAdd").click(add);
@@ -23,7 +27,7 @@ var caloriesList = function () {
         fillTable();
     };
 
-
+//fill the table with the input at the local storage
     var fillTable = function () {
 
         var Calories = storageAPI.getAll("Calories");
@@ -39,14 +43,16 @@ var caloriesList = function () {
 
     };
 
+//add function the user enter the date and the amount of calories and check if the input is legal.
+// and the function add the items to the local storage and present it on screen
     var add = function () {
 
-        var quantity = $("#txtQuantity").val();
+        var quantity = $("#txtQuantity").val(); //check if the input is legal
 
         if (quantity < 0) {
             alert("please enter positive number");
         }
-        else if (quantity>1000000) {
+        else if (quantity > 1000000) {
             alert("please enter a smaller number");
         }
         else if (!(Number(quantity) == quantity)) {
@@ -70,7 +76,7 @@ var caloriesList = function () {
 
     };
 
-
+//This function reset the list from local storage and screen and delete the main array
     var newList = function () {
         var answer = confirm("Creating a new list will erase existing list. Are you sure you want to create a new list?");
         if (answer === false)
@@ -79,7 +85,7 @@ var caloriesList = function () {
         storageAPI.createObject("Calories");
         location.reload();
         fillTable();
-        delete listArr;
+        delete listArr; //delete the array
     };
 
 

@@ -1,3 +1,9 @@
+  /*-Omri mizrahi 303082549
+  Adi tayri 205530967   */
+
+  /*styling for all the html pages */
+
+
 body{
 	color:#7c0032;
 	font-family:Arial;
@@ -434,6 +440,8 @@ ontent div div.aside div{
 	margin:20px 25px 30px 0;
 	width:120px;
 }
+
+/*footer design*/
 #footer{
 	background:#f2e1e9 url(../images/bg-footer2.gif) repeat-x top center;
 	height:auto;
