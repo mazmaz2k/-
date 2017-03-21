@@ -1,3 +1,9 @@
+  /*-Omri mizrahi 303082549
+  Adi tayri 205530967   */
+
+
+  //when this page is load it pops up the chart 
+//in the caloriesList page
 
 window.onload = function () {
     listArr = storageAPI.getAll("Calories");
@@ -6,21 +12,22 @@ window.onload = function () {
         listArr[i].quantity = parseInt(listArr[i].quantity);
     }
 
-    function compare1(val1, val2) {
+    function compare1(val1, val2) {  //compare function between two dates
         if (val1.id > val2.id)
             return 1;
         else if (val1.id < val2.id)
             return -1;
         return 0;
     }
-    var sortTxt = function (arr) {
+    var sortTxt = function (arr) {  //sort the arr by date
         arr.sort(compare1);
 
     }
 
     sortTxt(listArr);
 
-    var average1 = function () {
+//calculate the average calories amount
+    var average = function () {
         var sum = 0;
         for (var i = 0; i < listArr.length; i++) {
             sum += listArr[i].quantity;
@@ -28,7 +35,7 @@ window.onload = function () {
         return sum / (listArr.length);
     }
 
-
+//the info that need to be shown near the graph
     var showgh = function () {
         var arr = [];
         for (var i = 0; i < listArr.length; i++) {
@@ -42,16 +49,19 @@ window.onload = function () {
         }
         return arr;
     }
-
+//make average line to the chart
     var averageLine = function () {
         var a = [];
         for (var i = 0; i < listArr.length; i++) {
-            a.push({ x: listArr[i].id, y: average1(), indexLabel: "" });
+            a.push({ x: listArr[i].id, y: average(), indexLabel: "" });
 
         }
         return a;
     }
 
+
+//creatintg the chart by the data we have from the local storage 
+// about the dates and the quantity of the calories
     var chart = new CanvasJS.Chart("chartContainer",
         {
             title: {

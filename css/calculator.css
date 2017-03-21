@@ -1,3 +1,8 @@
+  /*-Omri mizrahi 303082549
+  Adi tayri 205530967   */
+
+/*designe for the calculator link */
+
 
 body{
      /* background-image: url("background.JPG");*/
@@ -20,6 +25,7 @@ input{
 	margin-top:10px;
 	position:inline-block;
 	}
+ /*buttons design*/   
 #cmdCalc ,#cmdReset{
     color:#660066;
     font-style: oblique;
@@ -27,6 +33,7 @@ input{
     border-radius: 5px; 
 
 }
+/*calculator design*/
 .calc{
     float: left;
    
@@ -52,6 +59,8 @@ fieldset{
     color: red;
     font-size: 15px;
     }
+
+ /*result design*/   
 .result{
         font-size: 21px;
         font-weight: bold;

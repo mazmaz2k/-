@@ -1,3 +1,10 @@
+  /*-Omri mizrahi 303082549
+  Adi tayri 205530967   */
+
+
+/*main design for the index html page*/
+
+
 #content div#home{
 	overflow:hidden;
 	margin:-30px auto 0;
@@ -6,6 +13,7 @@
 	font-family: fantasy;
 
 }
+/*side picture*/
 #content div#home ul{
 	background:#e5dae0;
 	float:left;
@@ -16,6 +24,8 @@
 	
 	
 }
+
+
 #content div#home ul li{
 	display:block;
 	height:180px;
@@ -51,6 +61,7 @@
 	font-weight:normal;
 	width:250px;
 }
+/*title design*/
 #content div#home div h1 a{
 	color:#7c0032;
 	text-decoration:none;
